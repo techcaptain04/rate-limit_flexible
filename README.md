@@ -18,9 +18,9 @@ Memory limiter also works in browser.
 
 **Atomic increments.** All operations in memory or distributed environment use atomic increments against race conditions.
 
-Allow **traffic bursts** with [BurstyRateLimiter](https://github.com/animir/node-rate-limiter-flexible/wiki/BurstyRateLimiter).
+Allow **traffic bursts** with [BurstyRateLimiter](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/BurstyRateLimiter).
 
-**Fast.** Average request takes `0.7ms` in Cluster and `2.5ms` in Distributed application. See [benchmarks](https://github.com/animir/node-rate-limiter-flexible#benchmark).
+**Fast.** Average request takes `0.7ms` in Cluster and `2.5ms` in Distributed application. See [benchmarks](https://github.com/techcaptain04/node-rate-limiter-flexible#benchmark).
 
 **Flexible.** Combine limiters, block key for some duration, delay actions, manage failover with insurance options, configure smart key blocking in memory and many others.
 
@@ -28,12 +28,12 @@ Allow **traffic bursts** with [BurstyRateLimiter](https://github.com/animir/node
 
 **Friendly.** No matter which node package you prefer: `redis` or `ioredis`, `sequelize`/`typeorm` or `knex`, `memcached`, native driver or `mongoose`. It works with all of them.
 
-**In memory blocks.** Avoid extra requests to store with [inMemoryBlockOnConsumed](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#inmemoryblockonconsumed).
+**In memory blocks.** Avoid extra requests to store with [inMemoryBlockOnConsumed](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#inmemoryblockonconsumed).
 
-**Deno compatible** See [this example](https://gist.github.com/animir/d06ca92931677f330d3f2d4c6c3108e4) 
+**Deno compatible** See [this example](https://gist.github.com/techcaptain04/d06ca92931677f330d3f2d4c6c3108e4) 
 
 It uses **fixed window** as it is much faster than rolling window. 
-[See comparative benchmarks with other libraries here](https://github.com/animir/node-rate-limiter-flexible/wiki/Comparative-benchmarks)
+[See comparative benchmarks with other libraries here](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Comparative-benchmarks)
 
 ## Installation
 
@@ -103,9 +103,9 @@ const headers = {
 * no race conditions
 * no production dependencies
 * TypeScript declaration bundled
-* Block Strategy against really powerful DDoS attacks (like 100k requests per sec) [Read about it and benchmarking here](https://github.com/animir/node-rate-limiter-flexible/wiki/In-memory-Block-Strategy)
-* Insurance Strategy as emergency solution if database / store is down [Read about Insurance Strategy here](https://github.com/animir/node-rate-limiter-flexible/wiki/Insurance-Strategy)
-* works in Cluster or PM2 without additional software [See RateLimiterCluster benchmark and detailed description here](https://github.com/animir/node-rate-limiter-flexible/wiki/Cluster)
+* Block Strategy against really powerful DDoS attacks (like 100k requests per sec) [Read about it and benchmarking here](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/In-memory-Block-Strategy)
+* Insurance Strategy as emergency solution if database / store is down [Read about Insurance Strategy here](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Insurance-Strategy)
+* works in Cluster or PM2 without additional software [See RateLimiterCluster benchmark and detailed description here](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Cluster)
 * useful `get`, `set`, `block`, `delete`, `penalty` and `reward` methods
 
 Full documentation is on [Wiki](https://github.com/animir/node-rate-limiter-flexible/wiki)
@@ -119,37 +119,37 @@ Full documentation is on [Wiki](https://github.com/animir/node-rate-limiter-flex
 * Fastify based NestJS app try [nestjs-fastify-rate-limiter](https://www.npmjs.com/package/nestjs-fastify-rate-limiter)
 
 Some copy/paste examples on Wiki:
-* [Minimal protection against password brute-force](https://github.com/animir/node-rate-limiter-flexible/wiki/Overall-example#minimal-protection-against-password-brute-force)
-* [Login endpoint protection](https://github.com/animir/node-rate-limiter-flexible/wiki/Overall-example#login-endpoint-protection)
-* [Websocket connection prevent flooding](https://github.com/animir/node-rate-limiter-flexible/wiki/Overall-example#websocket-single-connection-prevent-flooding)
-* [Dynamic block duration](https://github.com/animir/node-rate-limiter-flexible/wiki/Overall-example#dynamic-block-duration)
-* [Authorized users specific limits](https://github.com/animir/node-rate-limiter-flexible/wiki/Overall-example#authorized-and-not-authorized-users)
-* [Different limits for different parts of application](https://github.com/animir/node-rate-limiter-flexible/wiki/Overall-example#different-limits-for-different-parts-of-application)
-* [Apply Block Strategy](https://github.com/animir/node-rate-limiter-flexible/wiki/Overall-example#apply-in-memory-block-strategy-to-avoid-extra-requests-to-store)
-* [Setup Insurance Strategy](https://github.com/animir/node-rate-limiter-flexible/wiki/Overall-example#setup-insurance-strategy-for-store-limiters)
-* [Third-party API, crawler, bot rate limiting](https://github.com/animir/node-rate-limiter-flexible/wiki/Overall-example#third-party-api-crawler-bot-rate-limiting)
+* [Minimal protection against password brute-force](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Overall-example#minimal-protection-against-password-brute-force)
+* [Login endpoint protection](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Overall-example#login-endpoint-protection)
+* [Websocket connection prevent flooding](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Overall-example#websocket-single-connection-prevent-flooding)
+* [Dynamic block duration](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Overall-example#dynamic-block-duration)
+* [Authorized users specific limits](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Overall-example#authorized-and-not-authorized-users)
+* [Different limits for different parts of application](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Overall-example#different-limits-for-different-parts-of-application)
+* [Apply Block Strategy](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Overall-example#apply-in-memory-block-strategy-to-avoid-extra-requests-to-store)
+* [Setup Insurance Strategy](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Overall-example#setup-insurance-strategy-for-store-limiters)
+* [Third-party API, crawler, bot rate limiting](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Overall-example#third-party-api-crawler-bot-rate-limiting)
 
 ### Migration from other packages
-* [express-brute](https://github.com/animir/node-rate-limiter-flexible/wiki/ExpressBrute-migration) Bonus: race conditions fixed, prod deps removed
-* [limiter](https://github.com/animir/node-rate-limiter-flexible/wiki/RateLimiterQueue#migration-from-limiter) Bonus: multi-server support, respects queue order, native promises
+* [express-brute](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/ExpressBrute-migration) Bonus: race conditions fixed, prod deps removed
+* [limiter](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/RateLimiterQueue#migration-from-limiter) Bonus: multi-server support, respects queue order, native promises
 
 ### Docs and Examples
 
-* [Options](https://github.com/animir/node-rate-limiter-flexible/wiki/Options)
-* [API methods](https://github.com/animir/node-rate-limiter-flexible/wiki/API-methods)
-* [Redis](https://github.com/animir/node-rate-limiter-flexible/wiki/Redis)
-* [Memory](https://github.com/animir/node-rate-limiter-flexible/wiki/Memory)
-* [DynamoDb](https://github.com/animir/node-rate-limiter-flexible/wiki/DynamoDB)
-* [Prisma](https://github.com/animir/node-rate-limiter-flexible/wiki/Prisma)
-* [BurstyRateLimiter](https://github.com/animir/node-rate-limiter-flexible/wiki/BurstyRateLimiter) Traffic burst support
-* [Mongo](https://github.com/animir/node-rate-limiter-flexible/wiki/Mongo) (with [sharding support](https://github.com/animir/node-rate-limiter-flexible/wiki/Mongo#mongodb-sharding-options))
-* [MySQL](https://github.com/animir/node-rate-limiter-flexible/wiki/MySQL) (support Sequelize and Knex)
-* [Postgres](https://github.com/animir/node-rate-limiter-flexible/wiki/PostgreSQL) (support Sequelize, TypeORM and Knex)
-* [RateLimiterCluster](https://github.com/animir/node-rate-limiter-flexible/wiki/Cluster) ([PM2 cluster docs read here](https://github.com/animir/node-rate-limiter-flexible/wiki/PM2-cluster))
-* [Memcache](https://github.com/animir/node-rate-limiter-flexible/wiki/Memcache)
-* [RateLimiterUnion](https://github.com/animir/node-rate-limiter-flexible/wiki/RateLimiterUnion) Combine 2 or more limiters to act as single
-* [RLWrapperBlackAndWhite](https://github.com/animir/node-rate-limiter-flexible/wiki/Black-and-White-lists) Black and White lists
-* [RateLimiterQueue](https://github.com/animir/node-rate-limiter-flexible/wiki/RateLimiterQueue) Rate limiter with FIFO queue
+* [Options](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options)
+* [API methods](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/API-methods)
+* [Redis](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Redis)
+* [Memory](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Memory)
+* [DynamoDb](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/DynamoDB)
+* [Prisma](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Prisma)
+* [BurstyRateLimiter](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/BurstyRateLimiter) Traffic burst support
+* [Mongo](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Mongo) (with [sharding support](https://github.com/animir/node-rate-limiter-flexible/wiki/Mongo#mongodb-sharding-options))
+* [MySQL](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/MySQL) (support Sequelize and Knex)
+* [Postgres](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/PostgreSQL) (support Sequelize, TypeORM and Knex)
+* [RateLimiterCluster](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Cluster) ([PM2 cluster docs read here](https://github.com/animir/node-rate-limiter-flexible/wiki/PM2-cluster))
+* [Memcache](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Memcache)
+* [RateLimiterUnion](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/RateLimiterUnion) Combine 2 or more limiters to act as single
+* [RLWrapperBlackAndWhite](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Black-and-White-lists) Black and White lists
+* [RateLimiterQueue](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/RateLimiterQueue) Rate limiter with FIFO queue
 
 ### Changelog
 
@@ -178,41 +178,41 @@ See [releases](https://github.com/animir/node-rate-limiter-flexible/releases) fo
     Have to be `redis`, `ioredis`, `memcached`, `mongodb`, `pg`, `mysql2`, `mysql` or any other related pool or connection.
 
 ### Other options on Wiki:
-* [keyPrefix](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#keyprefix) Make keys unique among different limiters.
-* [blockDuration](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#blockduration) Block for N seconds, if consumed more than points.
-* [inMemoryBlockOnConsumed](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#inmemoryblockonconsumed) Avoid extra requests to store.
-* [inMemoryBlockDuration](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#inmemoryblockduration)
-* [insuranceLimiter](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#insurancelimiter) Make it more stable with less efforts.
-* [storeType](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#storetype) Have to be set to `knex`, if you use it.
-* [dbName](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#dbname) Where to store points.
-* [tableName](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#tablename) Table/collection.
-* [tableCreated](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#tablecreated) Is table already created in MySQL or PostgreSQL.
-* [clearExpiredByTimeout](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#clearexpiredbytimeout) For MySQL and PostgreSQL.
+* [keyPrefix](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#keyprefix) Make keys unique among different limiters.
+* [blockDuration](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#blockduration) Block for N seconds, if consumed more than points.
+* [inMemoryBlockOnConsumed](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#inmemoryblockonconsumed) Avoid extra requests to store.
+* [inMemoryBlockDuration](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#inmemoryblockduration)
+* [insuranceLimiter](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#insurancelimiter) Make it more stable with less efforts.
+* [storeType](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#storetype) Have to be set to `knex`, if you use it.
+* [dbName](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#dbname) Where to store points.
+* [tableName](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#tablename) Table/collection.
+* [tableCreated](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#tablecreated) Is table already created in MySQL or PostgreSQL.
+* [clearExpiredByTimeout](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#clearexpiredbytimeout) For MySQL and PostgreSQL.
 
 Smooth out traffic picks:
-* [execEvenly](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#execevenly)
-* [execEvenlyMinDelayMs](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#execevenlymindelayms)
+* [execEvenly](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#execevenly)
+* [execEvenlyMinDelayMs](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#execevenlymindelayms)
 
 Specific:
-* [indexKeyPrefix](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#indexkeyprefix) Combined indexes of MongoDB.
-* [timeoutMs](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#timeoutms) For Cluster.
-* [rejectIfRedisNotReady](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#rejectifredisnotready)
-* [useRedisPackage](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#useredispackage)
-* [useRedis3AndLowerPackage](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#useredis3andlowerpackage)
+* [indexKeyPrefix](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#indexkeyprefix) Combined indexes of MongoDB.
+* [timeoutMs](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#timeoutms) For Cluster.
+* [rejectIfRedisNotReady](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#rejectifredisnotready)
+* [useRedisPackage](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#useredispackage)
+* [useRedis3AndLowerPackage](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#useredis3andlowerpackage)
 
 ## API
 
 Read detailed description on Wiki.
 
-* [consume(key, points = 1)](https://github.com/animir/node-rate-limiter-flexible/wiki/API-methods#ratelimiterconsumekey-points--1) Consume points by key.
-* [get(key)](https://github.com/animir/node-rate-limiter-flexible/wiki/API-methods#ratelimitergetkey) Get `RateLimiterRes` or `null`.
-* [set(key, points, secDuration)](https://github.com/animir/node-rate-limiter-flexible/wiki/API-methods#ratelimitersetkey-points-secduration) Set points by key.
-* [block(key, secDuration)](https://github.com/animir/node-rate-limiter-flexible/wiki/API-methods#ratelimiterblockkey-secduration) Block key for `secDuration` seconds.
-* [delete(key)](https://github.com/animir/node-rate-limiter-flexible/wiki/API-methods#ratelimiterdeletekey) Reset consumed points.
-* [deleteInMemoryBlockedAll](https://github.com/animir/node-rate-limiter-flexible/wiki/API-methods#ratelimiterdeleteinmemoryblockedall)
-* [penalty(key, points = 1)](https://github.com/animir/node-rate-limiter-flexible/wiki/API-methods#ratelimiterpenaltykey-points--1) Increase number of consumed points in current duration.
-* [reward(key, points = 1)](https://github.com/animir/node-rate-limiter-flexible/wiki/API-methods#ratelimiterrewardkey-points--1) Decrease number of consumed points in current duration.
-* [getKey(key)](https://github.com/animir/node-rate-limiter-flexible/wiki/API-methods#ratelimitergetkeykey) Get internal prefixed key.
+* [consume(key, points = 1)](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/API-methods#ratelimiterconsumekey-points--1) Consume points by key.
+* [get(key)](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/API-methods#ratelimitergetkey) Get `RateLimiterRes` or `null`.
+* [set(key, points, secDuration)](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/API-methods#ratelimitersetkey-points-secduration) Set points by key.
+* [block(key, secDuration)](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/API-methods#ratelimiterblockkey-secduration) Block key for `secDuration` seconds.
+* [delete(key)](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/API-methods#ratelimiterdeletekey) Reset consumed points.
+* [deleteInMemoryBlockedAll](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/API-methods#ratelimiterdeleteinmemoryblockedall)
+* [penalty(key, points = 1)](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/API-methods#ratelimiterpenaltykey-points--1) Increase number of consumed points in current duration.
+* [reward(key, points = 1)](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/API-methods#ratelimiterrewardkey-points--1) Decrease number of consumed points in current duration.
+* [getKey(key)](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/API-methods#ratelimitergetkeykey) Get internal prefixed key.
 
 ## Benchmark
 
@@ -234,7 +234,7 @@ Average latency during test pure NodeJS endpoint in cluster of 4 workers with ev
 7. MySQL     14.59 ms (with connection pool 100)
 ```
 
-Note, you can speed up limiters with [inMemoryBlockOnConsumed](https://github.com/animir/node-rate-limiter-flexible/wiki/Options#inmemoryblockonconsumed) option.
+Note, you can speed up limiters with [inMemoryBlockOnConsumed](https://github.com/techcaptain04/node-rate-limiter-flexible/wiki/Options#inmemoryblockonconsumed) option.
 
 ## Contribution
 
