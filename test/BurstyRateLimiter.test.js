@@ -24,7 +24,6 @@ describe('BurstyRateLimiter', () => {
         done(err);
       });
   });
-
   it('consume 1 point from bursty limiter, if all consumed on limiter', (done) => {
     const testKey = 'consume1frombursty';
     const rlMemory = new RateLimiterMemory({ points: 1, duration: 1 });
@@ -48,7 +47,6 @@ describe('BurstyRateLimiter', () => {
         done(err);
       });
   });
-
   it('consume 1 point from limiter and 1 from bursty, and then 1 point reject with data from limiter', (done) => {
     const testKey = 'consume1frombursty';
     const rlMemory = new RateLimiterMemory({ points: 1, duration: 1 });
@@ -78,7 +76,6 @@ describe('BurstyRateLimiter', () => {
         done(err);
       });
   });
-
   it('do not consume from burst limiter, if rate limiter consume rejected with error', async() => {
     const testKey = 'consume-rejected-with-error';
     const redisMockClient = new Redis();
@@ -94,7 +91,6 @@ describe('BurstyRateLimiter', () => {
       duration: 1,
     });
     const bursty = new BurstyRateLimiter(rlRedisClosed, blRedis);
-
     let testFailed = false
     try {
       await bursty.consume(testKey)
@@ -113,7 +109,6 @@ describe('BurstyRateLimiter', () => {
       return new Error('must not');
     }
   });
-
   it('reject with burst limiter error if it happens', async() => {
     const testKey = 'consume-rejected-with-error';
     const redisMockClient = new Redis();
@@ -146,11 +141,9 @@ describe('BurstyRateLimiter', () => {
       throw new Error('must not');
     }
   });
-
   it('consume and get return the combined RateLimiterRes of both limiters with correct msBeforeNext', (done) => {
     const rlMemory = new RateLimiterMemory({ points: 1, duration: 10 });
     const rlBurstMemory = new RateLimiterMemory({ points: 20, duration: 1 });
-
     const bl = new BurstyRateLimiter(rlMemory, rlBurstMemory);
 
     bl.consume('keyGet', 1)
@@ -177,7 +170,6 @@ describe('BurstyRateLimiter', () => {
           });
       });
   });
-
   it('returns points from limiter', (done) => {
     const rlMemory = new RateLimiterMemory({ points: 1, duration: 10 });
     const rlBurstMemory = new RateLimiterMemory({ points: 20, duration: 1 });
@@ -186,7 +178,6 @@ describe('BurstyRateLimiter', () => {
     expect(brl.points).to.equal(1);
     done();
   });
-
   it('returns null if key does not exist', (done) => {
     const rlMemory = new RateLimiterMemory({ points: 1, duration: 10 });
     const rlBurstMemory = new RateLimiterMemory({ points: 20, duration: 1 });
@@ -198,7 +189,6 @@ describe('BurstyRateLimiter', () => {
         done();
       });
   });
-
   it('returns msBeforeNext=0 if key is not set on bursty limiter', (done) => {
     const rlMemory = new RateLimiterMemory({ points: 1, duration: 10 });
     const rlBurstMemory = new RateLimiterMemory({ points: 20, duration: 1 });
