@@ -250,5 +250,3 @@ It has to implement 4 methods:
     It must support `forceExpire` mode to overwrite key expiration time.
 * `_get` returns raw data by key or `null` if there is no key.
 * `_delete` deletes all key related data and returns `true` on deleted, `false` if key is not found.
-
-Note: all changes should be covered by tests.
